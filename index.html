@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090615">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Для тебя 💗</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="stars" id="stars"></div>
+  <div class="floating-layer" id="floatingLayer"></div>
+  <div class="confetti" id="confetti"></div>
+  <div class="hearts" id="hearts"></div>
+
+  <button class="sound" id="soundBtn" aria-label="Музыка">
+    <span class="sound-bars"><i></i><i></i><i></i></span>
+  </button>
+
+  <main class="experience" id="experience">
+
+    <section class="scene scene-start active" data-scene="0">
+      <div class="moon"></div>
+      <div class="city"></div>
+
+      <div class="cat-hero cat">
+        <div class="ear left"></div><div class="ear right"></div>
+        <div class="cat-head">
+          <span class="eye e1"></span><span class="eye e2"></span>
+          <span class="nose"></span>
+          <span class="mouth"></span>
+          <span class="whisker w1"></span><span class="whisker w2"></span>
+          <span class="whisker w3"></span><span class="whisker w4"></span>
+        </div>
+        <div class="cat-body"></div>
+        <div class="cat-paw p1"></div><div class="cat-paw p2"></div>
+        <div class="cash cash1">₽</div><div class="cash cash2">₽</div>
+      </div>
+
+      <div class="start-content">
+        <div class="eyebrow"><span></span> сегодня особенный день <span></span></div>
+        <h1>С Днём<br><em>рождения!</em></h1>
+        <p>Я кое-что приготовила для тебя...</p>
+        <button class="magic-btn" id="lookBtn">
+          <span>Погляди</span><b>♡</b>
+        </button>
+        <div class="hint">нажми, чтобы открыть ✦</div>
+      </div>
+    </section>
+
+    <section class="scene scene-loading" data-scene="1">
+      <div class="loader-orbit"></div>
+      <div class="loader-cat">🐱</div>
+      <div class="loading-text" id="loadingText">Собираем самые тёплые слова...</div>
+      <div class="loading-line"><span></span></div>
+      <div class="loading-percent" id="loadingPercent">0%</div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="2">
+      <div class="wish-bg-number">01</div>
+      <div class="wish-layout">
+        <div class="wish-art">
+          <div class="polaroid tilt-left">✈️<small>приключения</small></div>
+          <div class="polaroid tilt-right">🍰<small>счастливые моменты</small></div>
+          <div class="cat-card">
+            <div class="mini-cat">🐱</div>
+            <span>мяу...</span>
+          </div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 01</div>
+          <h2>Пусть в жизни<br><em>будет больше...</em></h2>
+          <p>дней, которые хочется запомнить, путешествий, вкусной еды, спонтанных приключений и моментов, когда ты просто счастлива.</p>
+          <div class="wish-tags"><span>путешествия</span><span>радость</span><span>впечатления</span></div>
+          <button class="next magic-next">дальше <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="3">
+      <div class="wish-bg-number">02</div>
+      <div class="wish-layout reverse">
+        <div class="wish-art money-art">
+          <div class="money-stack">💵</div>
+          <div class="money-stack two">💸</div>
+          <div class="cat-card cat-money-card"><div class="mini-cat">😎🐱</div><span>финансовое мяу</span></div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 02</div>
+          <h2>Пусть денег<br><em>будет много.</em></h2>
+          <p>Настолько много, чтобы можно было спокойно покупать всё, что хочется, путешествовать, баловать себя и никогда не спрашивать: «А хватит ли?»</p>
+          <div class="wish-tags"><span>₽₽₽</span><span>мечты</span><span>свобода</span></div>
+          <button class="next magic-next">дальше <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="4">
+      <div class="wish-bg-number">03</div>
+      <div class="wish-layout">
+        <div class="wish-art people-art">
+          <div class="glow-heart">♥</div>
+          <div class="friend-cats">🐱 🐱</div>
+          <div class="tiny-hearts">♡　♥　♡</div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 03</div>
+          <h2>Пусть рядом<br><em>будут свои люди.</em></h2>
+          <p>Те, с кем можно смеяться до слёз, говорить обо всём на свете, молчать без неловкости и всегда знать: тебя любят и поддерживают.</p>
+          <div class="wish-tags"><span>любовь</span><span>дружба</span><span>поддержка</span></div>
+          <button class="next magic-next">дальше <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="5">
+      <div class="wish-bg-number">04</div>
+      <div class="wish-layout reverse">
+        <div class="wish-art dream-art">
+          <div class="cloud c1">☁</div><div class="cloud c2">☁</div>
+          <div class="plane">✈</div>
+          <div class="dream-cat">🐱</div>
+          <div class="passport">✦ DREAMS ✦</div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 04</div>
+          <h2>Пусть мечты<br><em>становятся планами.</em></h2>
+          <p>А планы — реальностью. Пусть впереди будет столько красивых мест, новых историй и возможностей, что тебе самой будет интересно узнать, что будет дальше.</p>
+          <div class="wish-tags"><span>мечты</span><span>цели</span><span>приключения</span></div>
+          <button class="next magic-next">дальше <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="6">
+      <div class="wish-bg-number">05</div>
+      <div class="wish-layout">
+        <div class="wish-art calm-art">
+          <div class="halo"></div>
+          <div class="sleep-cat">😴🐱</div>
+          <div class="zzz">Z<br>Z<br>Z</div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 05</div>
+          <h2>Здоровья,<br><em>сил и спокойствия.</em></h2>
+          <p>Чтобы хватало энергии на всё любимое, чтобы сложные дни быстро проходили, а хороших дней становилось всё больше.</p>
+          <div class="wish-tags"><span>здоровье</span><span>энергия</span><span>гармония</span></div>
+          <button class="next magic-next">дальше <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene" data-scene="7">
+      <div class="wish-bg-number">06</div>
+      <div class="wish-layout reverse">
+        <div class="wish-art queen-art">
+          <div class="crown-big">♛</div>
+          <div class="queen-cat">👑🐱</div>
+          <div class="sparkle s1">✦</div><div class="sparkle s2">✦</div><div class="sparkle s3">✧</div>
+        </div>
+        <article class="wish-text">
+          <div class="label">ПОЖЕЛАНИЕ 06</div>
+          <h2>И никогда<br><em>не забывай...</em></h2>
+          <p>Ты уже прекрасная. Оставайся доброй, искренней, смешной, сильной и настоящей. Тебе не нужно становиться кем-то другим, чтобы быть любимой.</p>
+          <div class="wish-tags"><span>будь собой</span><span>сияй</span><span>люби себя</span></div>
+          <button class="next magic-next">последнее <b>→</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene final-scene" data-scene="8">
+      <div class="firework f1">✦</div><div class="firework f2">✦</div><div class="firework f3">✦</div>
+      <div class="final-cats">🐱　🐱　🐱</div>
+      <div class="final-content">
+        <div class="final-label">ЭТО ЕЩЁ НЕ ВСЁ...</div>
+        <h2>Пусть всё<br><em>самое лучшее</em><br>будет впереди!</h2>
+        <p id="finalType"></p>
+        <button class="restart" id="restart">♡ ещё раз</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress-ui">
+    <div class="progress-label"><span id="progressText">01</span> / 06</div>
+    <div class="progress-track"><span id="progressBar"></span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
